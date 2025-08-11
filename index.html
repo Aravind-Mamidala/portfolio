@@ -24,7 +24,10 @@
   <nav>
     <div class="container nav-container">
       <h1 class="logo">Aravind</h1>
-      <ul class="nav-links">
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -56,11 +59,11 @@
         </div>
         
         <div class="hero-btns">
-          <a href="MyResume2.pdf" download class="btn outline">Download Resume</a>
+          <a href="Mamidala_Aravind_Resume.pdf" download class="btn outline">Download Resume</a>
         </div>        
       </div>
       <div class="hero-img">
-        <img src="profile3.jpg" alt="Aravind profile picture" />
+        <img src="profile.jpg" alt="Aravind profile picture" />
       </div>
     </div>
   </header>
@@ -184,17 +187,7 @@
       <p>&copy; 2025 Aravind. Crafted with ❤️ and dedication.</p>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
-<script>
-    const aboutContainer = document.querySelector('.about_container');
-    window.addEventListener('scroll', () => {
-      const aboutTop = aboutContainer.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-  
-      if (aboutTop < windowHeight - 100) {
-        aboutContainer.classList.add('show');
-      }
-    });
-  </script>
   

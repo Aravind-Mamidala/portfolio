@@ -37,6 +37,21 @@ nav {
   letter-spacing: 1px;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #f8f409;
+  color: #ffffff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.menu-toggle i { pointer-events: none; font-size: 1.25rem; }
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -367,18 +382,65 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: row;       /* keep in one line, logo left, links right */
-    justify-content: space-evenly; /* push logo left, nav-links right */
+    position: relative;
+    flex-direction: row;
+    justify-content: center; /* center the logo */
     align-items: center;
     width: 100%;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f8f409;
+    color: #000;
+    border: none;
+    padding: 0.5rem 0.65rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 1001;
+  }
+
   .nav-links {
-    flex-direction: column;    /* stack nav links vertically */
-    gap: 0.5rem;
-    align-items: flex-end;     /* align nav links to the right */
-    width: auto;               /* shrink wrap to content */
-    margin-top: 0;             /* no top margin needed */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.98);
+    padding: 0.25rem 1rem; /* compact padding, item padding added on li */
+    border-bottom: 0.01px dotted white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    display: flex;            /* keep flex for animation */
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-end;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;            /* collapsed by default */
+    opacity: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 0.35s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.35s;
+    backdrop-filter: saturate(130%) blur(4px);
+  }
+
+  .nav-links.open {
+    max-height: 320px;        /* enough to show all links */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links li { width: 100%; }
+  .nav-links li a {
+    display: inline-block;
+    padding: 0.6rem 0;        /* touch target */
   }
 
   /* other existing styles remain unchanged */
@@ -387,13 +449,9 @@ footer {
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 2rem;
-  }
+  .hero-text h1 { font-size: 2rem; }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
 
   #about,
   #projects,
