@@ -1,193 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aravind | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Font Awesome CDN -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aravind | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Z8e0N1q5k1uS0jkBlSyKxHe6z0D7d6oYTwOlK2ED5ZC1kzmXzRTjczK2b1c1oHqAfX6a0Rm+z5N9+pbXn5Jc3A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Z8e0N1q5k1uS0jkBlSyKxHe6z0D7d6oYTwOlK2ED5ZC1kzmXzRTjczK2b1c1oHqAfX6a0Rm+z5N9+pbXn5Jc3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container nav-container">
+        <h1 class="logo">Aravind</h1>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="container nav-container">
-      <h1 class="logo">Aravind</h1>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <ul class="nav-links" id="primary-navigation">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <div class="hero-myne">
+    <!-- Hero Section -->
+    <header id="hero">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <div class="hero-myne">
             <h1>Hi, I'm <span>Aravind</span></h1>
-            <p>Full Stack Developer | MERN | DSA in C++</p>
-        </div>
-        <div class="hero-icons">
-          <a href="https://www.linkedin.com/in/aravind-mamidala-785457289/" target="_blank">
-            <img width="25" height="25" src="https://img.icons8.com/doodle/50/linkedin--v2.png" alt="linkedin--v2"/>
-          </a>
-          
-          <a href="https://github.com/Aravind-Mamidala" target="_blank">
-            <img width="30" height="30" src="https://img.icons8.com/doodle/50/github--v1.png" alt="github--v1"/>
-          </a>
-          
-          <a href="mailto:mamidalaaravind40@gmail.com">
-            <img width="28" height="28" src="https://img.icons8.com/ultraviolet/40/gmail--v2.png" alt="gmail--v2"/>
-          </a>
-        </div>
-        
-        <div class="hero-btns">
-          <a href="Mamidala_Aravind_Resume.pdf" download class="btn outline">Download Resume</a>
-        </div>        
-      </div>
-      <div class="hero-img">
-        <img src="profile.jpg" alt="Aravind profile picture" />
-      </div>
-    </div>
-  </header>
+            <p>Full Stack Developer | Machine Learning | DSA in C++</p>
+            <p class="hero-sub">
+              Building scalable web applications while exploring intelligent
+              systems through data and algorithms.
+            </p>
+          </div>
+          <div class="hero-icons">
+            <a
+              href="https://www.linkedin.com/in/aravind-mamidala-785457289/"
+              target="_blank"
+            >
+              <img
+                width="25"
+                height="25"
+                src="https://img.icons8.com/doodle/50/linkedin--v2.png"
+                alt="linkedin--v2"
+              />
+            </a>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about_container">
-      <h2>About Me</h2>
-      <p>
-        Hi! I'm Aravind, a tech enthusiast who loves building creative web applications and solving real-world problems. From writing clean code in C++ to designing responsive UIs with JavaScript, I enjoy the entire development journey. I'm currently seeking for an Internship. Let’s connect and create something amazing together!
-      </p>
-    </div>
-  </section>
+            <a href="https://github.com/Aravind-Mamidala" target="_blank">
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/doodle/50/github--v1.png"
+                alt="github--v1"
+              />
+            </a>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div>
-            <span>HTML</span>
-            <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="html-5--v1"/>
+            <a href="mailto:mamidalaaravind40@gmail.com">
+              <img
+                width="28"
+                height="28"
+                src="https://img.icons8.com/ultraviolet/40/gmail--v2.png"
+                alt="gmail--v2"
+              />
+            </a>
+          </div>
+
+          <div class="hero-btns">
+            <a href="AravindResume_fsmldl.pdf" download class="btn outline"
+              >Download Resume</a
+            >
+          </div>
         </div>
-        <div>
-          <span>CSS</span>
-          <img width="96" height="96" src="https://img.icons8.com/ios-filled/100/css.png" alt="css"/>
-        </div>
-        <div>
-          <span>Bootstrap</span>
-          <img width="96" height="96" src="https://img.icons8.com/fluency/96/bootstrap.png" alt="bootstrap"/>
-        </div>
-        <div>
-          <span>JavaScript</span>
-          <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png" alt="javascript--v1"/>
-        </div>
-        <div>
-          <span>Node.js</span>
-          <img width="96" height="96" src="https://img.icons8.com/fluency/96/node-js.png" alt="node-js"/>
-        </div>
-        <div>
-          <span>Express</span>
-          <img width="96" height="96" src="https://img.icons8.com/nolan/96/express-js.png" alt="express-js"/>
-        </div>
-        <div>
-          <span>SQL</span>
-          <img width="96" height="96" src="https://img.icons8.com/external-outline-juicy-fish/60/external-sql-coding-and-development-outline-outline-juicy-fish.png" alt="external-sql-coding-and-development-outline-outline-juicy-fish"/>
-        </div>
-        <div>
-          <span>MongoDB</span>
-          <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo"/>
-        </div>
-        <div>
-          <span>C</span>
-          <img width="96" height="96" src="https://img.icons8.com/ios-filled/100/copyright.png" alt="copyright"/>
-        </div>
-        <div>
-          <span>C++</span>
-          <img width="96" height="96" src="https://img.icons8.com/ios-filled/100/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
-        </div>
-        <div>
-          <span>Java</span>
-          <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-java-is-a-general-purpose-programming-language-that-is-class-based-logo-shadow-tal-revivo.png" alt="external-java-is-a-general-purpose-programming-language-that-is-class-based-logo-shadow-tal-revivo"/>
-        </div>
-        <div>
-          <span>DSA</span>
-          <img width="96" height="96" src="https://img.icons8.com/external-phatplus-lineal-phatplus/64/external-data-big-data-phatplus-lineal-phatplus-3.png" alt="external-data-big-data-phatplus-lineal-phatplus-3"/>
-        </div>
-        <div>
-          <span>Git/GitHub</span>
-          <img width="96" height="96" src="https://img.icons8.com/sf-black/64/github.png" alt="github"/>
+        <div class="hero-img">
+          <img src="COGNIZANT.jpeg" alt="Aravind profile picture" />
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Airbnb(Wanderlust)</h3>
-          <img src="wanderlust.png" alt="">
-          <p>A full-stack MERN application inspired by Airbnb. Users can explore stays, add listings, and view them on an interactive map</p>
-          <a href="https://major-project-d6kj.onrender.com/listings" class="btn">Live Demo</a>
-        </div>
-        <div class="project-card">
-          <h3>EbookStall</h3>
-          <img src="ebookstall.png" alt="">
-          <p>Online bookstore with user authentication, cart, search, and payment gateway (PHP + MySQL).</p>
-          <a href="https://ebookstall-backend.onrender.com/books" class="btn">Live Demo</a>
+    <!-- About Section -->
+    <section id="about">
+      <div class="about_container">
+        <h2>About Me</h2>
+        <p>
+          Full Stack Developer specializing in the MERN stack with a strong
+          foundation in Data Structures & Algorithms, demonstrated by solving
+          600+ problems across competitive platforms and ranking in the top 15%
+          on LeetCode. I build scalable, performance-driven web applications
+          with clean backend architecture and intuitive user experiences. In
+          addition to full-stack development, I design Machine Learning and Deep
+          Learning solutions, focusing on data-driven system building and
+          intelligent automation. I combine strong algorithmic thinking with
+          practical engineering to deliver robust and impactful real-world
+          systems.
+        </p>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="container">
+        <h2>Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <h3>600+ DSA Problems Solved</h3>
+            <p>
+              Strong foundation in Data Structures & Algorithms with 600+
+              problems solved across platforms including LeetCode and
+              GeeksforGeeks.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <h3>Top 15% on LeetCode</h3>
+            <p>
+              Ranked among the top 15% of users through consistent performance
+              in LeetCode contests.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <h3>Hackathon Leadership</h3>
+            <p>
+              Team Leader in Smart India Hackathon (SIH) and multiple technical
+              hackathons, driving solution architecture and implementation.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <h3>Cognizant AFM1 Hackathon</h3>
+            <p>
+              Participant in Cognizant AFM1 Hackathon, collaborating on
+              real-world problem statements and solution design.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <h3>University Code Club</h3>
+            <p>
+              Active member of the University Code Club, contributing to coding
+              culture, peer learning, and technical discussions.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>If you're looking to collaborate, hire, or just say hello—I'd love to hear from you!</p>
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>LearnShare</h3>
+            <img src="learn-share.png" alt="LearnShare" />
+            <p>
+              MERN-based learning resource sharing platform with secure
+              authentication, role-based access control, and scalable MongoDB
+              architecture for 40+ users.
+            </p>
+            <a href="https://learn-share-vert.vercel.app" class="btn"
+              >Live Demo</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Career Path Predictor</h3>
+            <img src="carieer path predictor.png" alt="Career Path Predictor" />
+            <p>
+              Machine Learning-powered career recommendation system built with
+              Python and Scikit-learn, achieving 90%+ validation accuracy with
+              optimized classification models.
+            </p>
+            <a href="https://career-path-predictor.streamlit.app" class="btn"
+              >Live Demo</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Airbnb(Wanderlust)</h3>
+            <img src="wanderlust.png" alt="" />
+            <p>
+              A full-stack MERN application inspired by Airbnb. Users can
+              explore stays, add listings, and view them on an interactive map
+            </p>
+            <a
+              href="https://major-project-d6kj.onrender.com/listings"
+              class="btn"
+              >Live Demo</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>EbookStall</h3>
+            <img src="ebookstall.png" alt="" />
+            <p>
+              Online bookstore with user authentication, cart, search, and
+              payment gateway (Node,Express + MySQL).
+            </p>
+            <a href="https://ebookstall-backend.onrender.com/books" class="btn"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <form class="contact-form" action="mailto:mamidalaaravind40@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+    <!-- Skills Section -->
 
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:mamidalaaravind40@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</section>
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
 
-<footer>
-    <div>
-      <p>&copy; 2025 Aravind. Crafted with ❤️ and dedication.</p>
-    </div>
-</footer>
-<script src="script.js"></script>
-</body>
+        <!-- Programming & Core -->
+        <div class="skill-category">
+          <h3>Programming & Core</h3>
+          <div class="skills-grid">
+            <div>
+              <span>C++</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/c-plus-plus-logo.png"
+              />
+            </div>
+
+            <div>
+              <span>Python</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/python--v1.png"
+              />
+            </div>
+
+            <div>
+              <span>JavaScript</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/javascript--v1.png"
+              />
+            </div>
+
+            <div>
+              <span>DSA</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/external-phatplus-lineal-phatplus/64/external-data-big-data-phatplus-lineal-phatplus-3.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Stack -->
+        <div class="skill-category">
+          <h3>Full Stack Development</h3>
+          <div class="skills-grid">
+            <div>
+              <span>React</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/react-native.png"
+              />
+            </div>
+
+            <div>
+              <span>Node.js</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/fluency/96/node-js.png"
+              />
+            </div>
+
+            <div>
+              <span>Express</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/nolan/96/express-js.png"
+              />
+            </div>
+
+            <div>
+              <span>MongoDB</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/mongodb.png"
+              />
+            </div>
+
+            <div>
+              <span>HTML</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/html-5--v1.png"
+              />
+            </div>
+
+            <div>
+              <span>CSS</span>
+              <img width="80" src="https://img.icons8.com/color/96/css3.png" />
+            </div>
+
+            <div>
+              <span>Bootstrap</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/bootstrap.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="skill-category">
+          <h3>Machine Learning</h3>
+          <div class="skills-grid">
+            <div>
+              <span>Scikit-learn</span>
+              <img
+                width="80"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+              />
+            </div>
+
+            <div>
+              <span>NumPy</span>
+              <img width="80" src="https://img.icons8.com/color/96/numpy.png" />
+            </div>
+
+            <div>
+              <span>Pandas</span>
+              <img
+                width="80"
+                src="https://img.icons8.com/color/96/pandas.png"
+              />
+            </div>
+
+            <div>
+              <span>Streamlit</span>
+              <img
+                width="80"
+                src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <p>
+          Open to collaborations, internships, and exciting opportunities. Feel
+          free to reach out.
+        </p>
+
+        <div class="contact-buttons">
+          <a href="mailto:mamidalaaravind40@gmail.com" class="contact-btn"
+            >Email Me</a
+          >
+          <a
+            href="https://www.linkedin.com/in/aravind-mamidala-785457289/"
+            target="_blank"
+            class="contact-btn"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/Aravind-Mamidala"
+            target="_blank"
+            class="contact-btn"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>&copy; 2025 Aravind. Crafted with ❤️ and dedication.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
-  

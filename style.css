@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Container */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Navigation */
+/* ================= NAV ================= */
 nav {
   background-color: black;
   padding: 1rem 0;
@@ -21,7 +25,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 0.01px dotted white;
 }
 
@@ -29,28 +32,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
   font-size: 2.2rem;
   font-weight: bold;
-  letter-spacing: 1px;
 }
-
-.menu-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid #f8f409;
-  color: #ffffff;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.menu-toggle i { pointer-events: none; font-size: 1.25rem; }
 
 .nav-links {
   display: flex;
@@ -62,21 +50,29 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #f8f409;
 }
 
-/* Hero Section */
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
 #hero {
   background-color: black;
-  height: 100vh;
-  padding: 1rem;
+  min-height: 100vh;
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .hero-container {
@@ -84,85 +80,59 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   gap: 1rem;
 }
 
 .hero-myne h1 {
   font-size: 3rem;
-  color: #f8f409;
-  margin-bottom: 0.5rem;
 }
 
-.hero-myne p {
-  font-size: 1.2rem;
+.hero-sub {
+  max-width: 500px;
 }
-
-.hero-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 7px;
-}
-
-/* Download Resume Button Styling */
-.hero-btns .btn.outline {
-  background: transparent;
-  border: 1px solid #f8f409; /* bright yellow border */
-  color:white; /* bright yellow text */
-  padding: 0.5rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.hero-btns .btn.outline:hover {
-  background-color: #f8f409;
-  color: black;
-  border: 1px solid white;
-}
-
 
 .hero-img img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* About Section */
+.hero-btns .btn.outline {
+  background: transparent;
+  border: 2px solid #f8f409;
+  color: #f8f409;
+  padding: 0.6rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btns .btn.outline:hover {
+  background-color: #f8f409;
+  color: black;
+}
+
+/* ================= ABOUT ================= */
 #about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  overflow: hidden;
+  padding: 4rem 1rem;
 }
 
 .about_container {
   max-width: 800px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-
-.about_container.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .about_container p {
@@ -172,61 +142,48 @@ nav {
   background-color: #f4f4f4;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Skills Section */
-#skills {
-  background-color: rgb(213, 236, 9);
-  padding: 4rem 2rem;
+/* ================= ACHIEVEMENTS ================= */
+#achievements {
+  background-color: rgb(221, 228, 233);
+  padding: 4rem 1rem;
 }
 
-#skills h2 {
+#achievements h2 {
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  text-align: center;
-  color: black;
+  color: #1a1916;
 }
 
-.skills-grid {
+.achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.skills-grid > div {
+.achievement-card {
   background-color: white;
-  padding: 1rem 0.5rem;
   border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 
-.skills-grid > div:hover {
-  background-color: #fff176;
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.achievement-card:hover {
+  transform: translateY(-6px);
+  background-color: #f8f836;
 }
 
-.skills-grid span {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.skills-grid > div img {
-  width: 64px;
-  height: 64px;
-}
-
-/* Projects Section */
+/* ================= PROJECTS ================= */
 #projects {
   background-color: black;
+  min-height: 100vh;
   padding: 4rem 1rem;
-  height: 100vh;
 }
 
 #projects h2 {
@@ -238,7 +195,7 @@ nav {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -249,7 +206,7 @@ nav {
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0);
-  transition: 0.3s;
+  transition: 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,28 +215,13 @@ nav {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   background-color: #f8f409;
 }
 
 .project-card img {
   width: 100%;
   max-width: 300px;
-  height: auto;
   border-radius: 10px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-
-.project-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.2rem;
-  color: black;
-}
-
-.project-card p {
-  font-size: 0.95rem;
-  color: black;
   margin-bottom: 1rem;
 }
 
@@ -287,181 +229,161 @@ nav {
   padding: 0.6rem 1.2rem;
   background-color: black;
   color: white;
-  border: none;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s ease;
 }
 
-.project-card .btn:hover {
-  background-color: #333;
+/* ================= SKILLS ================= */
+#skills {
+  background-color: rgb(213, 236, 9);
+  padding: 4rem 2rem;
 }
 
-/* Contact Section */
+#skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 3rem;
+}
+
+.skill-category h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.skills-grid > div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid > div:hover {
+  background-color: #fff176;
+  transform: translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
 #contact {
   background-color: #fffde7;
   padding: 4rem 1rem;
   text-align: center;
 }
 
-#contact h2 {
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-#contact p {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.contact-buttons {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #f4c300;
-}
-
-.contact-form .btn {
+.contact-btn {
   background-color: black;
   color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 500;
 }
 
-.contact-form .btn:hover {
-  background-color: #333;
+.contact-btn:hover {
+  background-color: #f8f409;
+  color: black;
 }
 
-/* Social Icons */
-.social-icons {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  color: #222;
-  margin: 0 0.8rem;
-  font-size: 1.8rem;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #f4c300;
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 2rem;
   background-color: #f8e004;
   color: black;
-  margin-top: 3rem;
 }
 
-/* Media Queries */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
-  .nav-container {
-    position: relative;
-    flex-direction: row;
-    justify-content: center; /* center the logo */
-    align-items: center;
-    width: 100%;
-  }
 
   .menu-toggle {
-    display: inline-flex;
+    display: block;
     position: absolute;
     right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #f8f409;
-    color: #000;
-    border: none;
-    padding: 0.5rem 0.65rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    top: 1rem;
     z-index: 1001;
   }
 
   .nav-links {
+    flex-direction: column;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 70px;
     left: 0;
-    background: rgba(0, 0, 0, 0.98);
-    padding: 0.25rem 1rem; /* compact padding, item padding added on li */
-    border-bottom: 0.01px dotted white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
-    display: flex;            /* keep flex for animation */
-    flex-direction: column;
-    gap: 0.25rem;
-    align-items: flex-end;
-    z-index: 1000;
-    overflow: hidden;
-    max-height: 0;            /* collapsed by default */
-    opacity: 0;
-    transform: translateY(-8px);
-    visibility: hidden;
-    pointer-events: none;
-    transition: max-height 0.35s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.35s;
-    backdrop-filter: saturate(130%) blur(4px);
-  }
-
-  .nav-links.open {
-    max-height: 320px;        /* enough to show all links */
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-    pointer-events: auto;
-    transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .nav-links li { width: 100%; }
-  .nav-links li a {
-    display: inline-block;
-    padding: 0.6rem 0;        /* touch target */
-  }
-
-  /* other existing styles remain unchanged */
-  .hero-container {
-    flex-direction: column;
+    right: 0;
+    background-color: black;
+    display: none;
+    padding: 1rem 0;
     text-align: center;
   }
 
-  .hero-text h1 { font-size: 2rem; }
+  .nav-links.open {
+    display: flex;
+  }
 
-  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  #hero {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
 
-  #about,
-  #projects,
-  #contact {
-    padding: 2rem 1rem;
-    height: auto;
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-text {
+    align-items: center;
   }
 
   .hero-img img {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .about_container p {
+    font-size: 1rem;
+  }
+
+  .projects-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-myne h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
   }
 }
